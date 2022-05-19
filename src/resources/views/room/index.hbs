@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12">
+            <div class="card shadow-2-strong" style="background-color: #f5f7fa;">
+                <a href="/room" class="btn btn-info d-inline-block">Phong Hien tai</a>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-borderless mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Tên
+                                        Phòng</th>
+                                    <th scope="col">Số Điện
+                                    </th>
+                                    <th scope="col">Số Nước
+                                    </th>
+                                    <th scope="col">Sinh Viên
+                                    </th>
+                                    <th scope="col">Edit
+                                    </th>
+                                    {{!-- <th scope="col">Delete
+                                    </th> --}}
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each rooms}}
+                                <tr>
+                                    <td>{{this._doc.name}}</td>
+                                    <td>{{this._doc.elec}}</td>
+                                    <td>{{this._doc.water}}</td>
+                                      <td>{{this._doc.sv}}</td>
+                                    <td>
+                                        <a href="/room/edit_room/{{this._doc._id}}" class="btn btn-success">Edit</a>
+                                    </td>
+
+                                    {{!-- <td>
+                                        <form method="POST" action="/room/delete/{{this._doc._id}}?_method=DELETE">
+                                            <button type="submit" class="btn btn-danger">X</button>
+                                        </form>
+                                    </td> --}}
+                                </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

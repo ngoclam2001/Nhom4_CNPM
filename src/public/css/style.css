@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #52a7c1;
+    background-image: linear-gradient(315deg, #52a7c1 0%, #b3f6d8 74%);
+}
+
+.main {
+    height: 100%;
+}
+
+.main-left {
+    width: 20%;
+}
+
+.logo:hover {
+    opacity: 0.5;
+    color: orange;
+    transition: all 0.9 ease;
+}
+
+.content-img {
+    width: 50%;
+}
+
+.list-group-item {
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
