@@ -1,5 +1,5 @@
 <div class="container">
-    <a href="/room/add_room" class="btn btn-info d-inline-block fw-bold">Đặt Phòng</a>
+    <a href="/employyer/add_employyer" class="btn btn-info d-inline-block fw-bold">Thêm nhân viên</a>
     <div class="row justify-content-center">
         <div class="col-12">
             <div class="card shadow-2-strong" style="background-color: #f5f7fa;">
@@ -8,38 +8,40 @@
                         <table class="table table-borderless mb-0">
                             <thead>
                                 <tr>
-                                    <th scope="col">Tên
-                                        Phòng</th>
-                                    <th scope="col">Số Điện
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Email
                                     </th>
-                                    <th scope="col">Số Nước
+                                    <th scope="col">Address
                                     </th>
-                                    <th scope="col">Sinh Viên
+                                    <th scope="col">Phone
+                                    </th>
+                                    <th scope="col">Sex
                                     </th>
                                     <th scope="col">Edit
                                     </th>
-                                    {{!-- <th scope="col">Delete
-                                    </th> --}}
+                                    <th scope="col">Delete
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {{#each rooms}}
+                                {{#each employyer}}
                                 <tr>
                                     <td>{{this._doc.name}}</td>
-                                    <td>{{this._doc.elec}}</td>
-                                    <td>{{this._doc.water}}</td>
-                                    <td>{{this._doc.sv}}</td>
+                                    <td>{{this._doc.email}}</td>
+                                    <td>{{this._doc.address}}</td>
+                                    <td>{{this._doc.phone}}</td>
+                                    <td>{{this._doc.sex}}</td>
                                     <td>
-                                        <a href="/room/edit_room/{{this._doc._id}}"
+                                        <a href="/employyer/edit_employyer/{{this._doc._id}}"
                                             class="btn btn-success">Edit</a>
                                     </td>
 
-                                    {{!-- <td>
+                                    <td>
                                         <form method="POST"
-                                            action="/room/delete/{{this._doc._id}}?_method=DELETE">
+                                            action="/employyer/delete/{{this._doc._id}}?_method=DELETE">
                                             <button type="submit" class="btn btn-danger">X</button>
                                         </form>
-                                    </td> --}}
+                                    </td>
                                 </tr>
                                 {{/each}}
                             </tbody>

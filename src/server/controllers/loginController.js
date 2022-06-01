@@ -1,4 +1,5 @@
 const loginModel = require('../model/signup');
+const loginAdmin = require('../model/admin');
 const bcrypt = require('bcrypt');
 
 class loginController {
@@ -9,14 +10,20 @@ class loginController {
     //[POST] 
     async login(req, res, next) {
         try {
-            const {account, password } = req.body;
-            const user = await loginModel.findOne({account});
-            if (!user) return res.status(400).send("User not found");
-            const validPassword = await bcrypt.compare(password, user.password);
-            if (!validPassword) return res.status(400).render('error');
-            if(validPassword) res.redirect(`/room/${user.name}`)
+            const { account, password } = req.body;
+            const user = await loginModel.findOne({ account })
+            const adminLogin = await loginAdmin.findOne({ account });
+
+
+            /// chua fix dc
+            if (adminLogin.password === password) {
+                res.redirect('/employyer');
+            } else if (user) {
+                const validPassword = await bcrypt.compare(password, user.password);
+                (validPassword) ? res.redirect('/room') : res.status(400).send('error');
+            }
         } catch (error) {
-            res.status(500).redirect('/error')
+            res.status(500).redirect('/error');
         }
     }
 }

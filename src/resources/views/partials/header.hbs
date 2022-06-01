@@ -15,10 +15,37 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/employyer">TLU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/employyer">Employyer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/room">Room</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bill">Bill</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contract">Contract</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="main">
         <div class="container-fluid d-flex px-0">
             <div class="main-left">
-                <div class="logo text-center">
+                {{!-- <div class="logo text-center">
                     <a href="/">
                         <h1>TLU</h1>
                     </a>
@@ -44,13 +71,20 @@
                             <a href="/bill">Hóa Đơn</a>
                         </span>
                     </li>
-                </ul>
+
+                    <li class="list-group-item">
+                        <span class="item-icon"><i class="fas fa-dragon"></i></span>
+                        <span class="taskbar-heading">
+                            <a href="/employyer">Nhân Viên</a>
+                        </span>
+                    </li>
+                </ul> --}}
             </div>
             <div class="main-right w-100 px-4">
                 <div class="header d-flex justify-content-evenly">
                     <div class="flex-grow-1"></div>
                     <div class="title h3 flex-grow-1">
-                        Ky Tuc Xa Dai Hoc Thuy Loi
+                        Ký túc xá Đại Học Thủy Lợi
                     </div>
                     <div class="name-login d-flex flex-grow-2">
                         <div class="dropdown">
@@ -60,7 +94,7 @@
                                 VoNo
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <li><a class="dropdown-item" href="#">Dang Xuat</a></li>
+                                <li><a class="dropdown-item" href="/">Dang Xuat</a></li>
                             </ul>
                         </div>
                     </div>
