@@ -14,7 +14,6 @@ class loginController {
             const user = await loginModel.findOne({ account })
             const adminLogin = await loginAdmin.findOne({ account });
 
-
             /// chua fix dc
             if (adminLogin.password === password) {
                 res.redirect('/employyer');
